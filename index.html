@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>مخططات فاشلة</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+<body>
+    <div class="container text-center mt-5">
+
+        <h1>عدد المرات اللي قلنا حنتجمع فيها وفشلت الخطة</h1>
+            <h1 id='counter'>0</h1>
+        <button class="btn btn-dark" onclick="newFail()">لم تزبط؟ اضغط هنا لتوثيق العملية الفاشلة</button>
+        <button class="btn btn-dark" onclick="newSuc()">أمزح زبطت</button>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script>
+        function newFail() {
+            Swal.fire({
+                title: "That's alright hun, everyone meets عند ربنا",
+                imageUrl: 'giphy2.gif',
+            })
+
+            document.getElementById('counter').innerText = Number(document.getElementById('counter').innerText) + 1
+
+
+        }
+
+        function newSuc() {
+                if( document.getElementById('counter').innerText>0){
+                    document.getElementById('counter').innerText = Number(document.getElementById('counter').innerText) - 1
+
+                }
+
+
+        }
+    </script>
+    </head>
+
+</body>
+
+</html>
